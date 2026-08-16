@@ -17,7 +17,7 @@ A persistent **DeepSeek balance chip** in the conversation header: shows the acc
 ## 安装 / Install
 
 ```bash
-dsh plugin --profile web add github:<owner>/dsh-balance
+dsh plugin --profile web add github:305037991x-pixel/dsh-balance
 ```
 
 重启 `dsh web` 并硬刷新页面（Ctrl+Shift+R）。
