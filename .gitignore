@@ -1,0 +1,6 @@
+node_modules/
+*.log
+restart-web.ps1
+pnpm-lock.yaml
+pnpm-workspace.yaml
+verify.log

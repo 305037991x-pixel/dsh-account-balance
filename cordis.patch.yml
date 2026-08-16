@@ -1,0 +1,8 @@
+# dsh-balance bundle patch
+#
+# 把本插件的行插入组合树：id 用于 Loader 去重/覆写，name 指向本包。
+# 浏览器半区（lib/client.js）通过 package.json 的 dsh.client 声明被
+# dsh-client-modules 扫描进 window.__DSH_BOOT__ 的模块表。
+- insert:
+    - id: dsh-balance
+      name: 'dsh-balance'
