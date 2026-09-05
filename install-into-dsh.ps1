@@ -33,7 +33,8 @@ $register = @'
 const fs = require('fs');
 const [pkgPath, srcDir] = process.argv.slice(2);
 const j = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-const dep = 'link:' + srcDir.replace(/\/g, '/');
+const path = require('path');
+const dep = 'link:' + srcDir.split(path.sep).join('/');
 let changed = false;
 if (j.dependencies['dsh-balance'] !== undefined) { delete j.dependencies['dsh-balance']; changed = true; console.log('已移除旧名依赖 dsh-balance'); }
 if (j.dependencies['dsh-account-balance'] !== dep) { j.dependencies['dsh-account-balance'] = dep; changed = true; }
